@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="shortcut icon" href="./completed-task.png" />.
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+</head>
+<style>
+body{
+    background: linear-gradient(to left, #2e86de, #54a0ff);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+    background-color: white;
+    width: 350px;
+    min-height: 450px;
+    margin: 50px auto;
+    border-radius: 20px;
+}
+
+#heading{
+    text-align: center;
+    padding: 15px 10px 0px 10px;
+    color: #9d5716;
+}
+
+#item{
+    width: 90%;
+    height: 50px;
+    font-size: 32px;
+    color: #9d2b16;
+    box-sizing: border-box;
+    margin: 0px 17px;
+    outline-color: #e06f1f;
+    border-radius: 10px;
+}
+
+.addBtn{
+    padding: 10px 20px;
+    margin-left: 17px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 155px;
+    background: #e0a21f;
+    border-radius: 5px;
+    border-color: #be8710;
+    color: black;
+    outline-color: #00C9FF;
+}
+
+.delAllBtn{
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 155px;
+    background: #e03e1f;
+    border-radius: 5px;
+    border-color: #b63015;
+    color: black;
+    outline-color: #00C9FF;
+}
+
+#content{
+    width: 310px;
+    height: 250px;
+    /* border: black 1px solid; */
+    padding: 0px 0px;
+    margin: 10px 17px;
+    overflow: auto;
+}
+
+#table{
+    width: 100%;
+}
+
+.editBtn{
+    background-color: #312ef0;
+    float:right;
+    border:none;
+    color:#fff;
+    padding:3px 10px;
+    cursor: pointer;
+}
+
+.delBtn{
+    background-color: #ee5253;
+    float:right;
+    border:none;
+    color:#fff;
+    padding:3px 10px;
+    cursor: pointer;
+}
+
+
+.firstTd{
+    width: 50%;
+    background-color: #ccc;
+}
+.secondTd{
+    width: 20%;
+}
+.thirdTd{
+    width: 20%;
+}
+.logout{
+  margin-left: 135px;
+  text-align: center;
+  border-radius: 20px;
+  height: 30px;
+  text-decoration: none;
+
+
+}
+</style>
+<body>
+    <div id="main">
+        <h2 id="heading">Todo Application</h2>
+        <div>
+            <input type="text" id="item" placeholder="add your todos"><br><br>
+            <button onclick="addItem()" class="addBtn"><b>Add Task</b></button>
+            <button onclick="deleteAll()" class="delAllBtn"><b>Delete All</b></button>
+        </div>
+        <div id="content">
+            <table id="table" cellpadding="3px">
+            </table>
+        </div>
+        <div>
+          <button><a class="logout" href="../public/login.html">Logout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></button>
+        </div>
+    </div>
+</body>
+<script src="home.js"></script>
+</html>

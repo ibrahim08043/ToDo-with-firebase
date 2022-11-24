@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <style>
+        * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  width: 500px;
+  padding: 10px;
+  margin: auto;
+}
+input {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1em;
+}
+.btn {
+  background-color: cornflowerblue;
+  color: black;
+  border: none;
+}
+li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1.5px solid grey;
+}
+.text {
+  color: cornflowerblue;
+}
+.label {
+  font-size: 0.7em;
+  color: grey;
+}
+    </style>
+    <div class="main">
+        <h1>Login</h1>
+        <form onsubmit="login(event)">
+           
+            <div>
+                <input type="text" name="" placeholder="Email" id="email">
+            </div>
+            <div>
+                <input type="text" name="" placeholder="Password" id="password">
+            </div>
+            <div>
+                <input type="submit" value="Login" class="btn">
+            </div>
+        </form>
+    </div>
+    
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>
